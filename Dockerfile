@@ -14,3 +14,8 @@ RUN go install github.com/ethereum/go-ethereum/cmd/abigen@latest
 
 RUN wget https://github.com/ethereum/solidity/releases/download/v0.8.19/solc-static-linux
 RUN mv solc-static-linux /usr/local/bin/solc && chmod a+x /usr/local/bin/solc
+
+RUN wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.14.8-a9523b64.tar.gz
+RUN tar -xzf geth-linux-amd64-1.14.8-a9523b64.tar.gz && cp  geth-linux-amd64-1.14.8-a9523b64/geth /usr/local/bin
+
+EXPOSE 8545
