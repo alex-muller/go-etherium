@@ -4,7 +4,7 @@ compile:
 
 .PHONY: run
 run:
-	docker run -p 8545:8545 goeth  geth --dev --http --http.api eth,web3,net --http.corsdomain "https://remix.ethereum.org"
+	geth --dev --http --http.api eth,web3,net --http.corsdomain "https://remix.ethereum.org" --datadir ./build/dev-chain
 
 .PHONY: build
 build:
