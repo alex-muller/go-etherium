@@ -6,7 +6,7 @@ contract Demo {
     // require
     // revert
     // assert
-    address owner;
+    address public owner;
 
     event Paid(address indexed _from, uint _amount, uint _timestamp);
 
@@ -15,7 +15,6 @@ contract Demo {
     }
 
     receive() external payable {
-        require( 1 == 2, "not equal");
         pay();
     }
 

@@ -7,7 +7,7 @@ for entry in $files
 do
   name="${entry%.*}"
   solc --abi ./contracts/$entry -o ./build/abi --overwrite
-  solc --bin ./contracts/$entry -o ./build/bin/
+  solc --bin ./contracts/$entry -o ./build/bin/ --overwrite
 
   abigen --abi=./build/abi/$name.abi --pkg bindings --type $name --out ./build/bindings/$name.go --bin ./build/bin/$name.bin
 done
