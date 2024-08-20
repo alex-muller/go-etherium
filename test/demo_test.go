@@ -100,6 +100,7 @@ func TestDemoItShouldAllowSendMoney(t *testing.T) {
 }
 
 func TestSendEtherUsingSimulatedBeTest(t *testing.T) {
+	// TODO without key store
 	ks := keystore.NewKeyStore("./../build/dev-chain/keystore", keystore.StandardScryptN, keystore.StandardScryptP)
 	am := accounts.NewManager(&accounts.Config{InsecureUnlockAllowed: false}, ks)
 	wallets := am.Wallets()
